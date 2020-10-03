@@ -159,7 +159,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/03/Fib/" class="post-title-link" itemprop="url">Fib</a>
+            <a href="/2020/10/03/Fib/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta">
@@ -168,8 +168,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-10-03 22:28:06" itemprop="dateCreated datePublished" datetime="2020-10-03T22:28:06+08:00">2020-10-03</time>
+              <time title="Created: 2020-10-03 22:28:06 / Modified: 22:29:55" itemprop="dateCreated datePublished" datetime="2020-10-03T22:28:06+08:00">2020-10-03</time>
             </span>
 
           
@@ -183,7 +184,59 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <p>-–</p>
+<p>title: Fibonacci</p>
+<p>date: 2020-10-03 17:43:10</p>
+<p>tags:C++</p>
+<p>-–</p>
+<p>```C++</p>
+<p>#include <iostream></p>
+<p>#include <vector></p>
+<p>using namespace std;</p>
+<p>int Fibonacci0(int n)</p>
+<p>{</p>
+<p>  if(n==0||n==1) return n;</p>
+<p>  return Fibonacci0(n-1)+Fibonacci0(n-2);</p>
+<p>}</p>
+<p>int Fib(int n,vector<int>&amp;dp)</p>
+<p>{</p>
+<p>  if(n==0||n==1) return n;</p>
+<p>  if(dp[n]!=-1) return dp[n];</p>
+<p>  return dp[n]=Fib(n-1,dp)+Fib(n-2,dp);</p>
+<p>}</p>
+<p>int Fibonacci1(int n)</p>
+<p>{</p>
+<p>  vector<int>dp(40,-1);</p>
+<p>  return Fib(n,dp);</p>
+<p>}</p>
+<p>int Fibonacci2(int n)</p>
+<p>{</p>
+<p>  vector<int>dp(n+1,0);</p>
+<p>  dp[1]=1;</p>
+<p>  for(int i=2;i&lt;=n;i++)</p>
+<p>  {</p>
+<p>​    dp[i]=dp[i-1]+dp[i-2];</p>
+<p>  }</p>
+<p>  return dp[n];</p>
+<p>}</p>
+<p>int Fibonacci3(int n)</p>
+<p>{</p>
+<p>  int a=0,b=1,c;</p>
+<p>  for(int i=2;i&lt;=n;i++)</p>
+<p>  {</p>
+<p>​    c=a+b;</p>
+<p>​    a=b;</p>
+<p>​    b=c;</p>
+<p>  }</p>
+<p>  return c;</p>
+<p>}</p>
+<p>int main()</p>
+<p>{</p>
+<p>  cout &lt;&lt; Fibonacci0(39)&lt;&lt;” “&lt;&lt;Fibonacci2(39)&lt;&lt;” “&lt;&lt;Fibonacci2(39)&lt;&lt;” “&lt;&lt;Fibonacci3(39)&lt;&lt;endl;</p>
+<p>  return 0;</p>
+<p>}</p>
+<p>```</p>
+
       
     </div>
 
