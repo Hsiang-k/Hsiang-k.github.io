@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>hexo+mathType</title>
+    <url>/2020/10/24/hexo-mathType/</url>
+    <content><![CDATA[<p>$$<br>evidence_{i}=\sum_{j}W_{ij}x_{j}+b_{i}<br>$$</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>vim快捷键（持续更新）</title>
+    <url>/2020/10/24/vim%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>sublimeText快捷键（持续更新）</title>
+    <url>/2020/10/24/sublimeText%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="跳转到指定的行"><a href="#跳转到指定的行" class="headerlink" title="跳转到指定的行"></a>跳转到指定的行</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">CTRL+G</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>服务器命令学习（持续更新）</title>
+    <url>/2020/10/24/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="1-设置服务器本地免密登陆"><a href="#1-设置服务器本地免密登陆" class="headerlink" title="1.设置服务器本地免密登陆"></a>1.设置服务器本地免密登陆</h3><h4 id="1-生成本地主机密钥"><a href="#1-生成本地主机密钥" class="headerlink" title="1).生成本地主机密钥"></a>1).生成本地主机密钥</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-将本地主机密钥文件传输到服务器上（注意需要输入服务器root用户密码）"><a href="#2-将本地主机密钥文件传输到服务器上（注意需要输入服务器root用户密码）" class="headerlink" title="2).将本地主机密钥文件传输到服务器上（注意需要输入服务器root用户密码）"></a>2).将本地主机密钥文件传输到服务器上（注意需要输入服务器root用户密码）</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub root@server_ip</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-查看日志"><a href="#2-查看日志" class="headerlink" title="2.查看日志"></a>2.查看日志</h3><p>####1)动态查看日志，按Ctrl+C退出。program为你想查看的项目名,例如ss</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /var/log</span><br><span class="line">tail -f program.log</span><br></pre></td></tr></table></figure>
+
+<p>####2)tail -n cnt的意思是显示最后cnt行。program.log是日志文件的名称。grep的意思是查找文件里符合条件的字符串</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tail -n cnt program.log | grep &quot;yyyy-mm-dd&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-如果希望看关键字附近的日志，思路是首先找到关键字所在的行，输入例如指令："><a href="#3-如果希望看关键字附近的日志，思路是首先找到关键字所在的行，输入例如指令：" class="headerlink" title="3)如果希望看关键字附近的日志，思路是首先找到关键字所在的行，输入例如指令："></a>3)如果希望看关键字附近的日志，思路是首先找到关键字所在的行，输入例如指令：</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat -n program.log | grep &quot;yyyy-mm-dd&quot;</span><br></pre></td></tr></table></figure>
+
+<p>这样会的到关键字的所在行的行号，如588,然后输入指令例如：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat -n program.log |tail -n +420|head -n 20</span><br></pre></td></tr></table></figure>
+
+<p>意思是从420行开始查，显示前20行日志，即从420行查到440行</p>
+<h4 id="4-可以使用less命令，对日志进行翻页查看"><a href="#4-可以使用less命令，对日志进行翻页查看" class="headerlink" title="4)可以使用less命令，对日志进行翻页查看"></a>4)可以使用less命令，对日志进行翻页查看</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">less -N program.log</span><br></pre></td></tr></table></figure>
+
+<p>可以查看日志，-N的意思是显示行号，这里N必须大写，按PageUp和PageDown可以进行翻页，输入q退出指令</p>
+<h4 id="5-有时候less命令查看日志显示乱码，可以在使用less命令之前先输入命令"><a href="#5-有时候less命令查看日志显示乱码，可以在使用less命令之前先输入命令" class="headerlink" title="5)有时候less命令查看日志显示乱码，可以在使用less命令之前先输入命令:"></a>5)有时候less命令查看日志显示乱码，可以在使用less命令之前先输入命令:</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export LESSCHARSET=utf-8</span><br></pre></td></tr></table></figure>
+
+<p>设置一下编码就可以解决乱码问题了有时候log日志很长，你希望从最底部开始往上看，可以按住SHIFT+G，然后通过PageUp和PageDown进行翻页,退出输入q即可</p>
+<h3 id="3-查看端口占用情况"><a href="#3-查看端口占用情况" class="headerlink" title="3.查看端口占用情况"></a>3.查看端口占用情况</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">netstat -ant |grep port || lsof -i:port || sudo lsof -i tcp:port #查看	</span><br><span class="line">kill -9 PID #杀掉线程，注意PID</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-密码更改遇到的错误"><a href="#4-密码更改遇到的错误" class="headerlink" title="4.密码更改遇到的错误"></a>4.密码更改遇到的错误</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">BAD PASSWORD: it is based on a dictionary word</span><br></pre></td></tr></table></figure>
+
+<p>解决方案:多输几个大小写字母</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Fibobacci数列的四种实现方式</title>
+    <url>/2020/10/03/Fibobacci%E6%95%B0%E5%88%97%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*时间复杂度：O(2_&#123;n&#125;),空间复杂度：递归栈的空间*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Fibonacci0</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>||n==<span class="number">1</span>) <span class="keyword">return</span> n;</span><br><span class="line">    <span class="keyword">return</span> Fibonacci0(n<span class="number">-1</span>)+Fibonacci0(n<span class="number">-2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*时间复杂度：O(n),空间复杂度：O(n)和递归栈的空间*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Fib</span><span class="params">(<span class="keyword">int</span> n,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp;dp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>||n==<span class="number">1</span>) <span class="keyword">return</span> n;</span><br><span class="line">    <span class="keyword">if</span>(dp[n]!=<span class="number">-1</span>) <span class="keyword">return</span> dp[n];</span><br><span class="line">    <span class="keyword">return</span> dp[n]=Fib(n<span class="number">-1</span>,dp)+Fib(n<span class="number">-2</span>,dp);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*时间复杂度：O(n),空间复杂度：O(n)*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Fibonacci1</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;dp(<span class="number">40</span>,<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">return</span> Fib(n,dp);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Fibonacci2</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;dp(n+<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">    dp[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        dp[i]=dp[i<span class="number">-1</span>]+dp[i<span class="number">-2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[n];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*时间复杂度：O(n),空间复杂度：O(1)*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Fibonacci3</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> a=<span class="number">0</span>,b=<span class="number">1</span>,c;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        c=a+b;</span><br><span class="line">        a=b;</span><br><span class="line">        b=c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+</search>

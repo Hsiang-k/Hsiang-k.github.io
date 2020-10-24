@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-10-08T08:47:31.417Z</updated>
+  <updated>2020-10-24T07:42:55.163Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,88 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo+mathType</title>
+    <link href="http://example.com/2020/10/24/hexo-mathType/"/>
+    <id>http://example.com/2020/10/24/hexo-mathType/</id>
+    <published>2020-10-24T07:36:34.000Z</published>
+    <updated>2020-10-24T07:42:55.163Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;$$&lt;br&gt;evidence_{i}=\sum_{j}W_{ij}x_{j}+b_{i}&lt;br&gt;$$&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vim快捷键（持续更新）</title>
+    <link href="http://example.com/2020/10/24/vim%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
+    <id>http://example.com/2020/10/24/vim%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</id>
+    <published>2020-10-24T07:29:13.000Z</published>
+    <updated>2020-10-24T07:29:13.168Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>sublimeText快捷键（持续更新）</title>
+    <link href="http://example.com/2020/10/24/sublimeText%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
+    <id>http://example.com/2020/10/24/sublimeText%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</id>
+    <published>2020-10-24T07:28:39.000Z</published>
+    <updated>2020-10-24T07:35:55.482Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;跳转到指定的行&quot;&gt;&lt;a href=&quot;#跳转到指定的行&quot; class=&quot;headerlink&quot; title=&quot;跳转到指定的行&quot;&gt;&lt;/a&gt;跳转到指定的行&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>服务器命令学习（持续更新）</title>
+    <link href="http://example.com/2020/10/24/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/"/>
+    <id>http://example.com/2020/10/24/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</id>
+    <published>2020-10-24T06:12:29.000Z</published>
+    <updated>2020-10-24T11:41:26.820Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-设置服务器本地免密登陆&quot;&gt;&lt;a href=&quot;#1-设置服务器本地免密登陆&quot; class=&quot;headerlink&quot; title=&quot;1.设置服务器本地免密登陆&quot;&gt;&lt;/a&gt;1.设置服务器本地免密登陆&lt;/h3&gt;&lt;h4 id=&quot;1-生成本地主机密钥&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Fibobacci数列的四种实现方式</title>
     <link href="http://example.com/2020/10/03/Fibobacci%E6%95%B0%E5%88%97%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/"/>
     <id>http://example.com/2020/10/03/Fibobacci%E6%95%B0%E5%88%97%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</id>
     <published>2020-10-03T14:41:09.000Z</published>
-    <updated>2020-10-08T08:47:31.417Z</updated>
+    <updated>2020-10-24T11:35:10.499Z</updated>
     
     
       
