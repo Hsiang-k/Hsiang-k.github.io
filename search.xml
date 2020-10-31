@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>/2020/10/30/jupyter%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h3 id="1-快速查看方法定义、参数：shift-table"><a href="#1-快速查看方法定义、参数：shift-table" class="headerlink" title="1.快速查看方法定义、参数：shift+table"></a>1.快速查看方法定义、参数：shift+table</h3>]]></content>
+  </entry>
+  <entry>
     <title>hexo+mathType</title>
     <url>/2020/10/24/hexo-mathType/</url>
     <content><![CDATA[<script type="math/tex; mode=display">
@@ -37,6 +42,7 @@ evidence_{i}=\sum_{j}W_{ij}x_{j}+b_{i}</script>]]></content>
 <p>解决方案:多输几个大小写字母</p>
 <h3 id="5-anaconda包管理"><a href="#5-anaconda包管理" class="headerlink" title="5.anaconda包管理"></a>5.anaconda包管理</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">列出所有已有虚拟环境</span><br><span class="line">conda env list</span><br><span class="line">conda info -e</span><br><span class="line">创建新的虚拟环境</span><br><span class="line">conda create -n env_name python=version</span><br><span class="line">激活并进入虚拟环境</span><br><span class="line">conda activate env_name</span><br><span class="line">删除一个已有的虚拟环境(以下两条指令均可)</span><br><span class="line">conda env remove -n env_name</span><br><span class="line">conda remove –name env_name –all</span><br><span class="line">分享代码的时候,同时也需要将运行环境分享给大家</span><br><span class="line">conda env export &gt; env.yaml</span><br><span class="line">用对方分享的YAML文件来创建一模一样的运行环境</span><br><span class="line">conda env create -f env.yaml</span><br><span class="line">Jupyter 运行Anaconda的虚拟环境</span><br><span class="line">source activate env_name</span><br><span class="line">conda install ipykernel (注意：在虚拟环境中安装ipykernel)</span><br><span class="line">python -m ipykernel install --name env_name --display-name &quot;env_name&quot; (写入Jupyter的kernel中)</span><br><span class="line">jupyter notebook</span><br><span class="line">Jupyter-Notebook 删除指定 kernel</span><br><span class="line">查看jupyter notebook中有哪些kernel</span><br><span class="line">jupyter kernelspec list</span><br><span class="line">–删除指定kernel</span><br><span class="line">jupyter kernelspec remove kernel_name</span><br><span class="line">管理包</span><br><span class="line">–管理指定虚拟环境的包</span><br><span class="line">conda install package_name -n env_name</span><br><span class="line">conda install package_name</span><br><span class="line">conda install pack=version (指定安装包的版本)</span><br><span class="line">–删除包</span><br><span class="line">conda remove package_name</span><br><span class="line">–更新包</span><br><span class="line">conda update package_name</span><br><span class="line">–列出所有已安装的包</span><br><span class="line">conda list</span><br><span class="line">–搜索包</span><br><span class="line">conda search package_name</span><br></pre></td></tr></table></figure>
 <p>*原博文出处：<a href="https://blog.csdn.net/lyqlola/article/details/89309509">https://blog.csdn.net/lyqlola/article/details/89309509</a></p>
+<h3 id="6-打开Mac"><a href="#6-打开Mac" class="headerlink" title="6.打开Mac"></a>6.打开Mac</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/Library/Preferences/</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
